@@ -10,15 +10,19 @@
 ## 📸 Screenshots
 
 ### Dashboard View
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/Dashboard.png)
 *Real-time statistics showing total tasks, completion rates, and employee task distribution*
+![Tasks](screenshots/Dark_mode.png)
+
 
 ### Task Management
-![Tasks](screenshots/tasks.png)
+![Tasks](screenshots/Tasks.png)
 *Comprehensive task management with filtering, CRUD operations, and status tracking*
 
+![Tasks](screenshots/Create_task.png)
+
 ### Employee Management
-![Employees](screenshots/employees.png)
+![Employees](screenshots/Employees.png)
 *Employee cards displaying contact information, department, and task statistics*
 
 ---
