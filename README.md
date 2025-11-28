@@ -7,6 +7,9 @@
 [![SQLite](https://img.shields.io/badge/SQLite-3.x-blue?logo=sqlite)](https://www.sqlite.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
+## Demo Video
+https://drive.google.com/file/d/16iMQfNMNcSER3BAxy1KkoohUe9BrcHqX/view?usp=sharing
+
 ## 📸 Screenshots
 
 ### 🟦 Dashboard & Dark Mode
