@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ============================================
+   DESIGN TOKENS
+   ============================================ */
+:root {
+  --bg-body: #f4f5f7;
+  --bg-surface: #ffffff;
+  --bg-soft: #f9fafb;
+
+  --text-primary: #0f172a;
+  --text-secondary: #4b5563;
+  --text-muted: #9ca3af;
+
+  --accent: #2563eb;
+  --accent-soft: #dbeafe;
+  --accent-hover: #1d4ed8;
+
+  --border-subtle: #e5e7eb;
+  --border-strong: #d1d5db;
+
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: #3b82f6;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 4px 6px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 10px 15px rgba(15, 23, 42, 0.10);
+
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+
+  --transition-fast: 150ms;
+  --transition-normal: 200ms;
+}
+
+[data-theme="dark"] {
+  --bg-body: #020617;
+  --bg-surface: #020617;
+  --bg-soft: #020617;
+
+  --text-primary: #e5e7eb;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+
+  --accent: #3b82f6;
+  --accent-soft: rgba(59, 130, 246, 0.15);
+  --accent-hover: #2563eb;
+
+  --border-subtle: #1f2933;
+  --border-strong: #374151;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg-body);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Limit global transitions (avoid everything animating) */
+button,
+a,
+input,
+textarea,
+select,
+.bg-white,
+.shadow-md,
+header {
+  transition: background-color var(--transition-normal) ease,
+              color var(--transition-normal) ease,
+              border-color var(--transition-normal) ease,
+              box-shadow var(--transition-normal) ease,
+              transform var(--transition-fast) ease;
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+.min-h-screen {
+  min-height: 100vh;
+  background: var(--bg-body);
+}
+
+/* The main wrapper in App: */
+.bg-gradient-to-br.from-blue-50.to-indigo-100 {
+  background: var(--bg-body);
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+header.bg-white {
+  background: var(--bg-surface) !important;
+  border-bottom: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+[data-theme="dark"] header.bg-white {
+  background: #020617 !important;
+  border-bottom-color: var(--border-strong);
+}
+
+header h1 {
+  color: var(--text-primary);
+}
+
+/* ============================================
+   CARDS / SURFACES
+   ============================================ */
+.bg-white.rounded-lg.shadow-md,
+.shadow-md {
+  background: var(--bg-surface) !important;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme="dark"] .bg-white.rounded-lg.shadow-md,
+[data-theme="dark"] .shadow-md {
+  background: #020617 !important;
+  border-color: var(--border-strong);
+}
+
+.bg-white.rounded-lg.shadow-md:hover,
+.shadow-md:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Small “soft” blocks (e.g. recent task rows) */
+.bg-gray-50 {
+  background: var(--bg-soft) !important;
+}
+
+/* Employee cards hover */
+.hover\:shadow-lg:hover {
+  box-shadow: var(--shadow-lg) !important;
+}
+
+/* ============================================
+   TYPOGRAPHY HELPERS
+   ============================================ */
+.text-gray-800 { color: var(--text-primary) !important; }
+.text-gray-700 { color: var(--text-secondary) !important; }
+.text-gray-600 { color: var(--text-secondary) !important; }
+.text-gray-500 { color: var(--text-muted) !important; }
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+button {
+  font-family: inherit;
+  font-weight: 500;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+/* Primary actions: .bg-indigo-600 from Tailwind */
+.bg-indigo-600 {
+  background: var(--accent) !important;
+  border: none !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+}
+
+.bg-indigo-600:hover {
+  background: var(--accent-hover) !important;
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.3);
+  transform: translateY(-1px);
+}
+
+.hover\:bg-indigo-700:hover {
+  background: var(--accent-hover) !important;
+}
+
+/* Neutral buttons: .bg-gray-100 */
+.bg-gray-100 {
+  background: var(--bg-soft) !important;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle) !important;
+  color: var(--text-secondary);
+}
+
+.bg-gray-100:hover,
+.hover\:bg-gray-200:hover {
+  background: #e5e7eb !important;
+}
+
+[data-theme="dark"] .bg-gray-100 {
+  background: #020617 !important;
+  border-color: var(--border-strong) !important;
+}
+
+/* Icon-only small buttons (edit/delete) */
+.p-2.text-blue-600:hover,
+.p-2.text-red-600:hover {
+  background: rgba(148, 163, 184, 0.1);
+}
+
+/* ============================================
+   FORMS
+   ============================================ */
+input,
+textarea,
+select {
+  background: var(--bg-surface);
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  padding: 0.5rem 0.75rem;
+  outline: none;
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  background: #020617;
+  border-color: var(--border-strong);
+  color: var(--text-primary);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.25);
+}
+
+/* ============================================
+   MODALS
+   ============================================ */
+.fixed.inset-0.bg-black {
+  background: rgba(15, 23, 42, 0.55) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fixed.inset-0.bg-black > div {
+  background: var(--bg-surface) !important;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-lg);
+}
+
+[data-theme="dark"] .fixed.inset-0.bg-black > div {
+  background: #020617 !important;
+  border-color: var(--border-strong);
+}
+
+/* ============================================
+   STATUS BADGES
+   ============================================ */
+.bg-green-100 {
+  background: rgba(22, 163, 74, 0.12) !important;
+  color: #166534 !important;
+}
+
+.bg-blue-100 {
+  background: rgba(59, 130, 246, 0.12) !important;
+  color: #1d4ed8 !important;
+}
+
+.bg-yellow-100 {
+  background: rgba(245, 158, 11, 0.12) !important;
+  color: #b45309 !important;
+}
+
+.bg-indigo-100 {
+  background: var(--accent-soft) !important;
+  color: var(--accent-hover) !important;
+}
+
+/* Task cards */
+.border.border-gray-200 {
+  border-color: var(--border-subtle) !important;
+  background: var(--bg-surface) !important;
+}
+
+.border.border-gray-200:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+/* ============================================
+   LOADING SPINNER
+   ============================================ */
+.animate-spin {
+  border-color: rgba(148, 163, 184, 0.3) !important;
+  border-top-color: var(--accent) !important;
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-body);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5f5;
+  border-radius: 999px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #1f2937;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .shadow-md:hover,
+  .bg-white.rounded-lg.shadow-md:hover {
+    transform: none;
+    box-shadow: var(--shadow-sm);
+  }
+
+  button:hover {
+    transform: none;
+  }
+}
+/* ====== SOFT HOVER EFFECTS ====== */
+
+/* Header buttons (Dashboard / Tasks / Employees / Theme toggle) */
+header button {
+  transform: translateY(0);
+}
+
+header button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.12);
+}
+
+/* Stat cards + dashboard boxes */
+.bg-white.rounded-lg.shadow-md,
+.shadow-md {
+  transform: translateY(0);
+}
+
+.bg-white.rounded-lg.shadow-md:hover,
+.shadow-md:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.12);
+}
+
+/* Task cards */
+.border.border-gray-200 {
+  transform: translateY(0);
+}
+
+.border.border-gray-200:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.10);
+  border-color: #cbd5e1;
+}
+
+/* Rows inside dashboard (Recent tasks, Tasks by employee) */
+.bg-gray-50 {
+  transition: background-color 150ms ease, transform 150ms ease,
+              box-shadow 150ms ease;
+}
+
+.bg-gray-50:hover {
+  background-color: #eef2f7;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(148, 163, 184, 0.25);
+}
