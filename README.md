@@ -9,24 +9,40 @@
 
 ## 📸 Screenshots
 
-### Dashboard View
-![Dashboard](Screenshots/Dashboard.png)
-*Real-time statistics showing total tasks, completion rates, and employee task distribution*
+### 🟦 Dashboard & Dark Mode
 
-![Dark Mode](Screenshots/Dark_mode.png)
-
-
-### Task Management
-![Tasks](Screenshots/Tasks.png)
-*Comprehensive task management with filtering, CRUD operations, and status tracking*
-
-![Create Task](Screenshots/Create_task.png)
-
-### Employee Management
-![Employees](Screenshots/Employees.png)
-*Employee cards displaying contact information, department, and task statistics*
+| Dashboard | Dark Mode |
+|-----------|-----------|
+| ![Dashboard](Screenshots/Dashboard.png) | ![Dark Mode](Screenshots/Dark_mode.png) |
+| *Main dashboard with task analytics and statistics* | *Dark mode for better low-light usability* |
 
 ---
+
+### 📝 Task Management & Create Task
+
+| Task List | Create Task |
+|-----------|------------|
+| ![Tasks](Screenshots/Tasks.png) | ![Create Task](Screenshots/Create_task.png) |
+| *Manage tasks with filters and status updates* | *Create new tasks using modal form with validation* |
+
+---
+
+### 👥 Employee Management
+
+| Employee Dashboard | Employee Details |
+|--------------------|------------------|
+| ![Employees](Screenshots/Employees.png) | ![Employee Info](Screenshots/Employee_details.png) |
+| *Employee cards showing task stats* | *Detailed employee task history screen* |
+
+---
+
+## 🌗 Theme Support
+
+This application supports both **Light Mode** and **Dark Mode** for better accessibility and user comfort.  
+Users can easily toggle between themes using the theme switch button available on the top right corner.
+
+---
+
 
 ## 🎯 Features
 
