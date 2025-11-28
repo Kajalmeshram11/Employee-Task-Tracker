@@ -31,7 +31,7 @@
 
 | Employee Dashboard | Employee Details |
 |--------------------|------------------|
-| ![Employees](Screenshots/Employees.png) | ![Employee Info](Screenshots/Employee_details.png) |
+| ![Employees](Screenshots/Employees.png) | ![Employee Info](Screenshots/new_employee.png) |
 | *Employee cards showing task stats* | *Detailed employee task history screen* |
 
 ---
